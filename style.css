@@ -25,8 +25,8 @@ li {
 }
 
 /* default styles */
-img {
-    width: 100%;
+.content img {
+    max-width: 100%;
 }
 
 .container {
