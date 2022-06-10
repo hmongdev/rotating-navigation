@@ -67,6 +67,7 @@ li {
 
 /* button styling */
 .circle button {
+    cursor: pointer;
     /* this is important because it's the child */
     position: absolute;
     top: 50%;
