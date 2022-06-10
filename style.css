@@ -24,10 +24,34 @@ body {
 
 .container {
     background-color: #fafafa;
-/* this makes the origin(point where the rotation occurs) point top-left */
+    /* this makes the origin(point where the rotation occurs) point top-left */
     transform-origin: top left;
+    /* make transition smooth */
+    transition: transform 0.5s linear;
+    /* default styling */
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
 }
 
 .container.show-nav {
     transform: rotate(-20deg);
+}
+
+/* positions the circle */
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+/* actual circle shape */
+.circle {
+    background-color: pink;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+
 }
