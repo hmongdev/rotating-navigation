@@ -99,3 +99,27 @@ li {
     transform: rotate(90deg);
     transform-origin: top left;
 }
+
+/* styles the content div */
+.content {
+    /* if we expand the window, the content will be limited to 1000px */
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+/* header text */
+.content h1 {
+    margin: 0;
+}
+
+/* author text */
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+/* lorem text */
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
