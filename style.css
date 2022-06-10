@@ -20,9 +20,17 @@ body {
     color: #222;
 }
 
+li {
+    list-style: none;
+}
+
 /* default styles */
+img {
+    width: 100%;
+}
 
 .container {
+    text-align: center;
     background-color: #fafafa;
     /* this makes the origin(point where the rotation occurs) point top-left */
     transform-origin: top left;
@@ -34,6 +42,7 @@ body {
     padding: 50px;
 }
 
+/* class that rotates if applied with Javascript */
 .container.show-nav {
     transform: rotate(-20deg);
 }
@@ -41,17 +50,51 @@ body {
 /* positions the circle */
 .circle-container {
     position: fixed;
-    top: -100px;
-    left: -100px;
+    top: -6.5rem;
+    left: -6.5rem;
 }
 
 /* actual circle shape */
 .circle {
     background-color: pink;
-    height: 200px;
-    width: 200px;
+    height: 13rem;
+    width: 13rem;
     border-radius: 50%;
+    /* this circle is the parent element */
     position: relative;
     transition: transform 0.5s linear;
+}
 
+/* button styling */
+.circle button {
+    /* this is important because it's the child */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: fit-content;
+    /* sizing */
+    min-width: 2rem;
+    border: 0;
+    font-size: 26px;
+    /* styling */
+    background: transparent;
+    color: white;
+}
+
+/* remove outline from buttons AFTER clicked */
+.circle button:focus {
+    outline: none;
+}
+
+/* this is the 3 bars */
+.circle button#open {
+    left: 60%;
+    top: 60%;
+}
+
+/* this is the X */
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
 }
