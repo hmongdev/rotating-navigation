@@ -20,10 +20,6 @@ body {
     color: #222;
 }
 
-li {
-    list-style: none;
-}
-
 /* default styles */
 .content img {
     max-width: 100%;
@@ -50,15 +46,15 @@ li {
 /* positions the circle */
 .circle-container {
     position: fixed;
-    top: -6.5rem;
-    left: -6.5rem;
+    top: -100px;
+    left: -100px;
 }
 
 /* actual circle shape */
 .circle {
     background-color: pink;
-    height: 13rem;
-    width: 13rem;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     /* this circle is the parent element */
     position: relative;
@@ -98,6 +94,24 @@ li {
     top: 60%;
     transform: rotate(90deg);
     transform-origin: top left;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
 }
 
 /* styles the content div */
