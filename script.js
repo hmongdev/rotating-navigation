@@ -1,4 +1,6 @@
-$(document).ready(readyNow);
+$(() => {
+  readyNow
+});
 
 const open = $('#open')
 const close = $('#close')
