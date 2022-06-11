@@ -16,6 +16,7 @@ body {
     height: 100vh; */
     overflow-x: hidden;
     margin: 0;
+    /* this acts as the background */
     background-color: #333;
     color: #222;
 }
@@ -27,6 +28,7 @@ body {
 
 .container {
     text-align: center;
+    /* this acts as the foreground */
     background-color: #fafafa;
     /* this makes the origin(point where the rotation occurs) point top-left */
     transform-origin: top left;
