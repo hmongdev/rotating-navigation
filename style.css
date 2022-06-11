@@ -143,18 +143,18 @@ nav ul li i {
 
 /* spacing between the icons and nav */
 nav ul li i span {
-    margin-left: 1rem;
+    margin-left: 0rem;
 }
 
 /* targets the ABOUT */
 nav ul li+li {
-    margin-left: 2rem;
+    margin-left: 1rem;
     transform: translateX(-150%);
 }
 
 /* targets the CONTACT */
 nav ul li+li+li {
-    margin-left: 3rem;
+    margin-left: 2rem;
     transform: translateX(-200%);
 }
 
