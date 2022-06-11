@@ -1,14 +1,15 @@
-$(document).ready(ready);
+$(document).ready(readyNow);
 
 const open = $('#open')
 const close = $('#close')
 const container = $('.container')
 
-function ready() {
-  open.on('click', function () {
-    container.classList.add('show-nav');
+function readyNow() {
+  open.on('click', () => {
+    container.toggleClass('show-nav');
   });
-  close.on('click', function () {
-    container.classList.remove('show-nav');
+
+  close.on('click', () => {
+    container.toggleClass('show-nav');
   });
 }

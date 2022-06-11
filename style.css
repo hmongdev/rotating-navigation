@@ -50,7 +50,8 @@ body {
 .container.show-nav + nav li {
     /* this returns the li to original position */
     transform: translateX(0);
-    transition-delay: 3s;
+    /* how fast the nav will appear */
+    transition-delay: 0.4s ease-in;
 }
 
 /* positions the circle */
@@ -71,7 +72,7 @@ body {
     transition: transform 0.5s linear;
 }
 
-/* rotate the X icon */
+/* rotate the circle */
 .container.show-nav .circle {
     transform: rotate(-70deg);
 }
@@ -131,7 +132,7 @@ nav ul li {
     margin: 40px 0;
     /* animate from the left to the right */
     transform: translateX(-80%);
-    transition: transform 3s ease-in;
+    transition: transform 0.5s ease-in;
 }
 
 /* size of the navigation */
