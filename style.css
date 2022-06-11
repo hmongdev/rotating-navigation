@@ -26,6 +26,7 @@ body {
     max-width: 100%;
 }
 
+/* this holds the main content */
 .container {
     text-align: center;
     /* this acts as the foreground */
@@ -43,6 +44,13 @@ body {
 /* class that rotates if applied with Javascript */
 .container.show-nav {
     transform: rotate(-20deg);
+}
+
+/* when show-nav is applied, transition the nav-bar */
+.container.show-nav + nav li {
+    /* this returns the li to original position */
+    transform: translateX(0);
+    transition-delay: 3s;
 }
 
 /* positions the circle */
@@ -63,18 +71,23 @@ body {
     transition: transform 0.5s linear;
 }
 
+/* rotate the X icon */
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
 /* button styling */
 .circle button {
     cursor: pointer;
     /* this is important because it's the child */
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /* top: 50%;
+    left: 50%; */
     height: fit-content;
     /* sizing */
-    min-width: 2rem;
+    min-width: 2.5rem;
     border: 0;
-    font-size: 26px;
+    font-size: 2rem;
     /* styling */
     background: transparent;
     color: white;
@@ -94,6 +107,7 @@ body {
 /* this is the X */
 .circle button#close {
     top: 60%;
+    left: 40%;
     transform: rotate(90deg);
     transform-origin: top left;
 }
@@ -116,23 +130,31 @@ nav ul li {
     color: #fff;
     margin: 40px 0;
     /* animate from the left to the right */
-    /* transform: translateX(-140%); */
-    transition: transform 0.4s ease-in;
+    transform: translateX(-80%);
+    transition: transform 3s ease-in;
 }
 
 /* size of the navigation */
 nav ul li i {
     font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* spacing between the icons and nav */
+nav ul li i span {
+    margin-left: 1rem;
 }
 
 /* targets the ABOUT */
 nav ul li+li {
     margin-left: 2rem;
+    transform: translateX(-150%);
 }
 
 /* targets the CONTACT */
 nav ul li+li+li {
     margin-left: 3rem;
+    transform: translateX(-200%);
 }
 
 /* styles the content div */
