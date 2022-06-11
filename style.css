@@ -110,10 +110,29 @@ nav ul {
     padding-left: 30px;
 }
 
+/* navigation background */
 nav ul li {
     text-transform: uppercase;
     color: #fff;
     margin: 40px 0;
+    /* animate from the left to the right */
+    /* transform: translateX(-140%); */
+    transition: transform 0.4s ease-in;
+}
+
+/* size of the navigation */
+nav ul li i {
+    font-size: 1.5rem;
+}
+
+/* targets the ABOUT */
+nav ul li+li {
+    margin-left: 2rem;
+}
+
+/* targets the CONTACT */
+nav ul li+li+li {
+    margin-left: 3rem;
 }
 
 /* styles the content div */
