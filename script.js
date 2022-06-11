@@ -2,11 +2,7 @@ const open = $('#open')
 const close = $('#close')
 const container = $('.container')
 
-$(() => {
-  readyNow
-});
-
-function readyNow() {
+$(document).ready(function () {
   open.on('click', () => {
     container.toggleClass('show-nav');
   });
@@ -14,4 +10,4 @@ function readyNow() {
   close.on('click', () => {
     container.toggleClass('show-nav');
   });
-}
+});
